@@ -3,13 +3,13 @@ export type CarlistingSeed = {
   mileage: number;
   description: string;
   price: number;
-  make: Make;
-  model: Model;
-  images: Image[];
-  gearboxType: GearboxType;
-  driveType: DriveType;
-  fuelType: FuelType;
-  order: Order;
+  make: MakeSeed;
+  model: ModelSeed;
+  images: ImageSeed[];
+  gearboxType: GearboxTypeSeed;
+  driveType: DriveTypeSeed;
+  fuelType: FuelTypeSeed;
+  order: [];
 };
 
 export type MakeSeed = {

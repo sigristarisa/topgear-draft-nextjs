@@ -1,9 +1,14 @@
 import { GearboxTypeSeed } from "../../helpers/types";
 
-export const automatic: GearboxTypeSeed = {
+const automatic: GearboxTypeSeed = {
   name: "automat",
 };
 
-export const manual: GearboxTypeSeed = {
+const manual: GearboxTypeSeed = {
   name: "manuell",
+};
+
+export const gearbox = {
+  automatic,
+  manual,
 };

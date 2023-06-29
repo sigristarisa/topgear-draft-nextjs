@@ -1,21 +1,29 @@
 import { FuelTypeSeed } from "../../helpers/types";
 
-export const electric: FuelTypeSeed = {
+const electric: FuelTypeSeed = {
   name: "elektro",
 };
 
-export const gasoline: FuelTypeSeed = {
+const gasoline: FuelTypeSeed = {
   name: "benzin",
 };
 
-export const diesel: FuelTypeSeed = {
+const diesel: FuelTypeSeed = {
   name: "diesel",
 };
 
-export const hybrid: FuelTypeSeed = {
+const hybrid: FuelTypeSeed = {
   name: "hybrid",
 };
 
-export const hydrogen: FuelTypeSeed = {
+const hydrogen: FuelTypeSeed = {
   name: "hydrogen",
+};
+
+export const fuel = {
+  electric,
+  gasoline,
+  diesel,
+  hybrid,
+  hydrogen,
 };

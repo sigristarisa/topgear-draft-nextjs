@@ -1,13 +1,19 @@
 import { DriveTypeSeed } from "../../helpers/types";
 
-export const awd: DriveTypeSeed = {
+const awd: DriveTypeSeed = {
   name: "allrad",
 };
 
-export const fwd: DriveTypeSeed = {
+const fwd: DriveTypeSeed = {
   name: "vorderradantrieb",
 };
 
-export const rwd: DriveTypeSeed = {
+const rwd: DriveTypeSeed = {
   name: "hinterradantrieb",
+};
+
+export const drive = {
+  awd,
+  fwd,
+  rwd,
 };

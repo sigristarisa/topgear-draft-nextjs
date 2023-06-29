@@ -1,41 +1,54 @@
 import { MakeSeed } from "../../helpers/types";
 
-export const volkswagen: MakeSeed = {
+const volkswagen: MakeSeed = {
   name: "VW",
 };
 
-export const skoda: MakeSeed = {
+const skoda: MakeSeed = {
   name: "skoda",
 };
 
-export const ford: MakeSeed = {
+const ford: MakeSeed = {
   name: "ford",
 };
 
-export const tesla: MakeSeed = {
+const tesla: MakeSeed = {
   name: "tesla",
 };
 
-export const seat: MakeSeed = {
+const seat: MakeSeed = {
   name: "seat",
 };
 
-export const cupra: MakeSeed = {
+const cupra: MakeSeed = {
   name: "cupra",
 };
 
-export const hyundai: MakeSeed = {
+const hyundai: MakeSeed = {
   name: "hyundai",
 };
 
-export const audi: MakeSeed = {
+const audi: MakeSeed = {
   name: "audi",
 };
 
-export const fiat: MakeSeed = {
+const fiat: MakeSeed = {
   name: "fiat",
 };
 
-export const bmw: MakeSeed = {
+const bmw: MakeSeed = {
   name: "bmw",
+};
+
+export const make = {
+  volkswagen,
+  skoda,
+  ford,
+  tesla,
+  seat,
+  cupra,
+  hyundai,
+  audi,
+  fiat,
+  bmw,
 };

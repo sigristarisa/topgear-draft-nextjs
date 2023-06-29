@@ -1,49 +1,64 @@
 import { ModelSeed } from "../../helpers/types";
 
-export const tiguan: ModelSeed = {
+const tiguan: ModelSeed = {
   name: "tiguan",
 };
 
-export const golf: ModelSeed = {
+const golf: ModelSeed = {
   name: "golf",
 };
 
-export const formentor: ModelSeed = {
+const formentor: ModelSeed = {
   name: "formentor",
 };
 
-export const octavia: ModelSeed = {
+const octavia: ModelSeed = {
   name: "octavia",
 };
 
-export const fabia: ModelSeed = {
+const fabia: ModelSeed = {
   name: "fabia",
 };
 
-export const puma: ModelSeed = {
+const puma: ModelSeed = {
   name: "puma",
 };
 
-export const model3: ModelSeed = {
+const model3: ModelSeed = {
   name: "model 3",
 };
 
-export const ibiza: ModelSeed = {
+const ibiza: ModelSeed = {
   name: "ibiza",
 };
 
-export const polo: ModelSeed = {
+const polo: ModelSeed = {
   name: "polo",
 };
 
-export const tucson: ModelSeed = {
+const tucson: ModelSeed = {
   name: "tucson",
 };
 
-export const tarraco: ModelSeed = {
+const tarraco: ModelSeed = {
   name: "tarraco",
 };
 
-export const a3: ModelSeed = {
+const a3: ModelSeed = {
   name: "a3",
+};
+
+export const model = {
+  tiguan,
+  golf,
+  formentor,
+  octavia,
+  fabia,
+  puma,
+  model3,
+  ibiza,
+  polo,
+  tucson,
+  tarraco,
+  a3,
 };
