@@ -13,7 +13,7 @@ const formentor: ModelSeed = {
 };
 
 const octavia: ModelSeed = {
-  name: "octavia",
+  name: "oktavia",
 };
 
 const fabia: ModelSeed = {
