@@ -1,4 +1,41 @@
-type Carlisting = {
+/*--- Seeding ---*/
+export type CarlistingSeed = {
+  mileage: number;
+  description: string;
+  price: number;
+  make: Make;
+  model: Model;
+  images: Image[];
+  gearboxType: GearboxType;
+  driveType: DriveType;
+  fuelType: FuelType;
+  order: Order;
+};
+
+export type MakeSeed = {
+  name: string;
+};
+
+export type ModelSeed = {
+  name: string;
+};
+
+export type ImageSeed = {
+  url: string;
+};
+export type GearboxTypeSeed = {
+  name: string;
+};
+
+export type DriveTypeSeed = {
+  name: string;
+};
+
+export type FuelTypeSeed = {
+  name: string;
+};
+
+export type Carlisting = {
   id: number;
   mileage: number;
   description: string;
@@ -27,7 +64,7 @@ type Model = {
 type Image = {
   id: number;
   url: string;
-  carlisting: Carlisting[];
+  carlisting: Carlisting;
 };
 
 type GearboxType = {
