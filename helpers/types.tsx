@@ -9,7 +9,7 @@ export type CarlistingSeed = {
   gearboxType: GearboxTypeSeed;
   driveType: DriveTypeSeed;
   fuelType: FuelTypeSeed;
-  order: [];
+  order: null;
 };
 
 export type MakeSeed = {
@@ -35,6 +35,7 @@ export type FuelTypeSeed = {
   name: string;
 };
 
+/*--- Client ---*/
 export type Carlisting = {
   id: number;
   mileage: number;
