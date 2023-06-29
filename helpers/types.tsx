@@ -9,6 +9,7 @@ export type CarlistingSeed = {
   gearboxType: GearboxTypeSeed;
   driveType: DriveTypeSeed;
   fuelType: FuelTypeSeed;
+  is_online: boolean;
   order: null;
 };
 
@@ -42,18 +43,25 @@ export type Carlisting = {
   description: string;
   price: number;
   make: Make;
+  makeid: number;
   model: Model;
+  modelId: number;
   images: Image[];
   gearboxType: GearboxType;
+  gearboxId: number;
   driveType: DriveType;
+  driveId: number;
   fuelType: FuelType;
-  order: Order;
+  fuelId: number;
+  is_online: boolean;
+  order: Order | null;
+  orderId: number;
 };
 
-type Make = {
+export type Make = {
   id: number;
   name: string;
-  carlisting: Carlisting[];
+  carlisting: Carlisting[] | [];
 };
 
 type Model = {

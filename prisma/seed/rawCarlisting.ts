@@ -17,6 +17,7 @@ export const carlisting: CarlistingSeed[] = [
     gearboxType: gearbox.manual,
     driveType: drive.awd,
     fuelType: fuel.gasoline,
+    is_online: true,
     order: null,
   },
   {
@@ -29,6 +30,7 @@ export const carlisting: CarlistingSeed[] = [
     gearboxType: gearbox.manual,
     driveType: drive.rwd,
     fuelType: fuel.gasoline,
+    is_online: true,
     order: null,
   },
   {
@@ -41,6 +43,7 @@ export const carlisting: CarlistingSeed[] = [
     gearboxType: gearbox.manual,
     driveType: drive.fwd,
     fuelType: fuel.diesel,
+    is_online: true,
     order: null,
   },
   {
@@ -53,6 +56,7 @@ export const carlisting: CarlistingSeed[] = [
     gearboxType: gearbox.automatic,
     driveType: drive.fwd,
     fuelType: fuel.gasoline,
+    is_online: true,
     order: null,
   },
   {
@@ -65,6 +69,7 @@ export const carlisting: CarlistingSeed[] = [
     gearboxType: gearbox.automatic,
     driveType: drive.fwd,
     fuelType: fuel.diesel,
+    is_online: true,
     order: null,
   },
   {
@@ -77,6 +82,7 @@ export const carlisting: CarlistingSeed[] = [
     gearboxType: gearbox.manual,
     driveType: drive.fwd,
     fuelType: fuel.gasoline,
+    is_online: true,
     order: null,
   },
   {
@@ -89,6 +95,7 @@ export const carlisting: CarlistingSeed[] = [
     gearboxType: gearbox.automatic,
     driveType: drive.awd,
     fuelType: fuel.gasoline,
+    is_online: true,
     order: null,
   },
   {
@@ -101,6 +108,7 @@ export const carlisting: CarlistingSeed[] = [
     gearboxType: gearbox.automatic,
     driveType: drive.fwd,
     fuelType: fuel.diesel,
+    is_online: true,
     order: null,
   },
 ];

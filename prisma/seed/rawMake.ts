@@ -52,3 +52,16 @@ export const make = {
   fiat,
   bmw,
 };
+
+export const makeList = [
+  volkswagen,
+  skoda,
+  ford,
+  tesla,
+  seat,
+  cupra,
+  hyundai,
+  audi,
+  fiat,
+  bmw,
+];
