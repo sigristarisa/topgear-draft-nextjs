@@ -17,3 +17,5 @@ export const drive = {
   fwd,
   rwd,
 };
+
+export const driveList = [awd, fwd, rwd];

@@ -27,3 +27,5 @@ export const fuel = {
   hybrid,
   hydrogen,
 };
+
+export const fuelList = [electric, gasoline, diesel, hybrid, hydrogen];

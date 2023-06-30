@@ -12,3 +12,5 @@ export const gearbox = {
   automatic,
   manual,
 };
+
+export const gearboxList = [automatic, manual];

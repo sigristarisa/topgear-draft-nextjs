@@ -62,3 +62,18 @@ export const model = {
   tarraco,
   a3,
 };
+
+export const modelList = [
+  tiguan,
+  golf,
+  formentor,
+  octavia,
+  fabia,
+  puma,
+  model3,
+  ibiza,
+  polo,
+  tucson,
+  tarraco,
+  a3,
+];
