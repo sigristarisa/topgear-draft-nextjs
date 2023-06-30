@@ -7,6 +7,7 @@ import { driveList } from "./rawDriveType";
 import { fuelList } from "./rawFuelType";
 import {
   CarlistingSeed,
+  Carlisting,
   MakeSeed,
   ModelSeed,
   ImageSeed,
@@ -14,9 +15,27 @@ import {
   DriveTypeSeed,
   FuelTypeSeed,
 } from "../../helpers/types";
-import prisma from "@prisma/client";
+import prisma, { Prisma, PrismaClient } from "@prisma/client";
 
 const dbClient = new prisma.PrismaClient();
+// type PrismaOption = PrismaClient<
+//   Prisma.PrismaClientOptions,
+//   never,
+//   Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined
+// >;
+
+// export type PrismaModel = keyof Omit<
+//   PrismaOption,
+//   | "$connect"
+//   | "$disconnect"
+//   | "$executeRaw"
+//   | "$executeRawUnsafe"
+//   | "$on"
+//   | "$queryRaw"
+//   | "$queryRawUnsafe"
+//   | "$transaction"
+//   | "$use"
+// >;
 
 const seed = async (): Promise<void> => {
   await createMakeData();
@@ -81,6 +100,18 @@ const createFuelData = async (): Promise<FuelTypeSeed[]> => {
   }
   return fuelArr;
 };
+
+// const populateData = async <T>(list: T[], modelName: PrismaModel): Promise<T[]> => {
+//   const data = [];
+//   const model = prisma[modelName]
+//   for (const listItem of list) {
+//     const createdData = await dbClient.modelName.create({
+//       data: listItem,
+//     });
+//     data.push(createdData);
+//   }
+//   return data;
+// };
 
 seed()
   .catch(async (e) => {

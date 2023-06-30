@@ -1,5 +1,5 @@
 /*--- Seeding ---*/
-export type CarlistingSeed = {
+export interface CarlistingSeed {
   mileage: number;
   description: string;
   price: number;
@@ -11,7 +11,7 @@ export type CarlistingSeed = {
   fuelType: FuelTypeSeed;
   is_online: boolean;
   order: null;
-};
+}
 
 export type MakeSeed = {
   name: string;
@@ -43,7 +43,7 @@ export type Carlisting = {
   description: string;
   price: number;
   make: Make;
-  makeid: number;
+  makeId: number;
   model: Model;
   modelId: number;
   images: Image[];
