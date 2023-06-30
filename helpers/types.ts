@@ -64,37 +64,37 @@ export type Make = {
   carlisting: Carlisting[] | [];
 };
 
-type Model = {
+export type Model = {
   id: number;
   name: string;
   carlisting: Carlisting[];
 };
 
-type Image = {
+export type Image = {
   id: number;
   url: string;
   carlisting: Carlisting;
 };
 
-type GearboxType = {
+export type GearboxType = {
   id: number;
   name: string;
   carlisting: Carlisting[];
 };
 
-type DriveType = {
+export type DriveType = {
   id: number;
   name: string;
   carlisting: Carlisting[];
 };
 
-type FuelType = {
+export type FuelType = {
   id: number;
   name: string;
   carlisting: Carlisting[];
 };
 
-type Order = {
+export type Order = {
   id: number;
   carlisting: Carlisting;
   hasDeliveryService: boolean;
