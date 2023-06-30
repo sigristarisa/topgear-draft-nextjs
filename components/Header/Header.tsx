@@ -6,9 +6,10 @@ const Header = () => {
       <Image
         src="/img/farie_logo.webp"
         height={48}
-        width={200}
+        width={108}
         alt="farie logo"
       />
+      <nav></nav>
     </header>
   );
 };
