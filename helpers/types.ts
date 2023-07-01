@@ -56,6 +56,8 @@ export type Carlisting = {
   is_online: boolean;
   order: Order | null;
   orderId: number;
+  createdAt: Date | string;
+  updatedAt: Date | string | null;
 };
 
 export type Make = {

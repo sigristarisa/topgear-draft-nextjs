@@ -1,34 +1,30 @@
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 import Layout from "../components/Layout/Layout";
 import Carlistings from "../helpers/models/carlisting";
-
 import { Carlisting } from "../helpers/types";
 
-type Props = {
-  name: string;
-};
-
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const res = await Carlistings.findAllCarlisting();
-  // const carlisting = JSON.stringify(res);
+  const carlisting: Carlisting[] = await JSON.parse(JSON.stringify(res));
 
-  // console.log("anything?", carlisting);
-
-  console.log(JSON.parse(JSON.stringify(res)));
   return {
     props: {
-      carlisting: JSON.parse(JSON.stringify(res)),
+      carlisting,
     },
   };
 };
 
-const Home = ({ carlisting }: any) => {
+const Home = ({
+  carlisting,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  console.log("carlisting", carlisting);
   return (
     <Layout>
       <div>hi</div>
       <ul>
-        {carlisting.map((car: Carlisting) => {
-          <li>{car.mileage}</li>;
-        })}
+        {carlisting.map((car: Carlisting) => (
+          <li key={car.id}>{car.description}</li>
+        ))}
       </ul>
     </Layout>
   );
