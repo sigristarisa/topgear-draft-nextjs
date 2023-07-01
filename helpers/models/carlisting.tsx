@@ -52,7 +52,15 @@ export default class Carlistings {
   }
 
   static async findAllCarlisting() {
-    const allCarlisting = await dbClient.carlisting.findMany();
+    const allCarlisting = await dbClient.carlisting.findMany({
+      include: {
+        make: true,
+        model: true,
+        gearboxType: true,
+        driveType: true,
+        fuelType: true,
+      },
+    });
     return allCarlisting;
   }
 }
