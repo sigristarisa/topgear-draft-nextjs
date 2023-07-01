@@ -18,26 +18,9 @@ import {
 import prisma, { Prisma, PrismaClient } from "@prisma/client";
 
 const dbClient = new prisma.PrismaClient();
-// type PrismaOption = PrismaClient<
-//   Prisma.PrismaClientOptions,
-//   never,
-//   Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined
-// >;
-
-// export type PrismaModel = keyof Omit<
-//   PrismaOption,
-//   | "$connect"
-//   | "$disconnect"
-//   | "$executeRaw"
-//   | "$executeRawUnsafe"
-//   | "$on"
-//   | "$queryRaw"
-//   | "$queryRawUnsafe"
-//   | "$transaction"
-//   | "$use"
-// >;
 
 const seed = async (): Promise<void> => {
+  // await createCarlistingData();
   await createMakeData();
   await createModelData();
   await createGearboxData();
@@ -45,6 +28,24 @@ const seed = async (): Promise<void> => {
   await createFuelData();
   process.exit(0);
 };
+
+// const createCarlistingData = async () => {
+//   const carlistingArr = [];
+//   for (const car of carlisting) {
+//     const createdCarlisting = await dbClient.carlisting.create({
+//       data: {
+//         ...car,
+//         make: { connect: { id: car.makeId } },
+//         model: { connect: { id: car.modelId } },
+//         gearboxType: { connect: { id: car.gearboxId } },
+//         driveType: { connect: { id: car.driveId } },
+//         fuelType: { connect: { id: car.fuelId } },
+//       },
+//     });
+//     carlistingArr.push(createdCarlisting);
+//   }
+//   return carlistingArr;
+// };
 
 const createMakeData = async (): Promise<MakeSeed[]> => {
   const makeArr = [];

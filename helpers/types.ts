@@ -3,14 +3,13 @@ export interface CarlistingSeed {
   mileage: number;
   description: string;
   price: number;
-  make: MakeSeed;
-  model: ModelSeed;
-  images: ImageSeed[];
-  gearboxType: GearboxTypeSeed;
-  driveType: DriveTypeSeed;
-  fuelType: FuelTypeSeed;
+  makeId?: number;
+  modelId?: number;
+  gearboxId?: number;
+  driveId?: number;
+  fuelId?: number;
   is_online: boolean;
-  order: null;
+  orderId?: number | null;
 }
 
 export type MakeSeed = {
