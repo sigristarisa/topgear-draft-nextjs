@@ -1,12 +1,12 @@
 import prisma from "@prisma/client";
 import {
-  Make,
-  Model,
-  Image,
+  MakeType,
+  ModelType,
+  ImageType,
   GearboxType,
   DriveType,
   FuelType,
-  Order,
+  OrderType,
 } from "../types";
 
 const dbClient = new prisma.PrismaClient();
@@ -16,26 +16,26 @@ export default class Car {
   mileage: number;
   description: string;
   price: number;
-  make: Make;
-  model: Model;
-  images: Image[];
+  make: MakeType;
+  model: ModelType;
+  images: ImageType[];
   gearboxType: GearboxType;
   driveType: DriveType;
   fuelType: FuelType;
-  order: Order | null;
+  order: OrderType | null;
 
   constructor(
     id: number,
     mileage: number,
     description: string,
     price: number,
-    make: Make,
-    model: Model,
-    images: Image[],
+    make: MakeType,
+    model: ModelType,
+    images: ImageType[],
     gearboxType: GearboxType,
     driveType: DriveType,
     fuelType: FuelType,
-    order: Order | null
+    order: OrderType | null
   ) {
     (this.id = id),
       (this.mileage = mileage),
@@ -61,5 +61,16 @@ export default class Car {
       },
     });
     return allCarlisting;
+  }
+
+  static async findByMake(make: MakeType) {
+    const foundCarlisting = await dbClient.carlisting.findMany({
+      where: {
+        make: {
+          name: make.name,
+        },
+      },
+    });
+    return foundCarlisting;
   }
 }

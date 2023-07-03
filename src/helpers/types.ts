@@ -41,11 +41,11 @@ export type Carlisting = {
   mileage: number;
   description: string;
   price: number;
-  make: Make;
+  make: MakeType;
   makeId: number;
-  model: Model;
+  model: ModelType;
   modelId: number;
-  images: Image[];
+  images: ImageType[];
   gearboxType: GearboxType;
   gearboxId: number;
   driveType: DriveType;
@@ -53,25 +53,25 @@ export type Carlisting = {
   fuelType: FuelType;
   fuelId: number;
   is_online: boolean;
-  order: Order | null;
+  order: OrderType | null;
   orderId: number;
   createdAt: Date | string;
   updatedAt: Date | string | null;
 };
 
-export type Make = {
+export type MakeType = {
   id: number;
   name: string;
   carlisting: Carlisting[] | [];
 };
 
-export type Model = {
+export type ModelType = {
   id: number;
   name: string;
   carlisting: Carlisting[];
 };
 
-export type Image = {
+export type ImageType = {
   id: number;
   url: string;
   carlisting: Carlisting;
@@ -95,17 +95,17 @@ export type FuelType = {
   carlisting: Carlisting[];
 };
 
-export type Order = {
+export type OrderType = {
   id: number;
   carlisting: Carlisting;
   hasDeliveryService: boolean;
   totalPrice: number;
 };
 
-type Customer = {
+type CustomerType = {
   id: number;
   firstName: string;
   lastName: string;
   email: string;
-  order: Order[];
+  order: OrderType[];
 };
