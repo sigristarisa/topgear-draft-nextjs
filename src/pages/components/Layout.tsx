@@ -1,21 +1,21 @@
-import Head from "next/head";
+import { useState } from "react";
 import Header from "./Header";
+import { MakeType } from "../../helpers/types";
+import { filterContext } from "../../helpers/createContext";
 
 interface Children {
   children: JSX.Element | JSX.Element[];
 }
 
 const Layout = ({ children }: Children) => {
+  const [make, setMake] = useState<MakeType>({});
   return (
-    <div>
-      <Head>
-        <link rel="icon" href="/img/farie_favicon.png" />
-        <meta name="description" content="Farie" />
-        <title>Farie – Gebrauchte Fahrzeuge online kaufen mit Garantie</title>
-      </Head>
-      <Header />
-      <main>{children}</main>
-    </div>
+    <filterContext.Provider value={{ make, setMake }}>
+      <div>
+        <Header />
+        <main>{children}</main>
+      </div>
+    </filterContext.Provider>
   );
 };
 

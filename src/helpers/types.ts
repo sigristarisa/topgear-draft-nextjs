@@ -60,9 +60,9 @@ export type Carlisting = {
 };
 
 export type MakeType = {
-  id: number;
-  name: string;
-  carlisting: Carlisting[] | [];
+  id?: number;
+  name?: string;
+  carlisting?: Carlisting[] | [];
 };
 
 export type ModelType = {

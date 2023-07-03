@@ -1,10 +1,11 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { useContext } from "react";
 import Layout from "../pages/components/Layout";
-import Header from "./components/Header";
 import CarList from "./components/CarList";
 import Car from "../helpers/models/carlisting";
 import Make from "../helpers/models/make";
 import { Carlisting, MakeType } from "../helpers/types";
+import { filterContext } from "../helpers/createContext";
 
 export const getStaticProps: GetStaticProps = async () => {
   const carRes = await Car.findAll();
