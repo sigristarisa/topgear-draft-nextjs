@@ -2,7 +2,7 @@ import { Carlisting } from "../../helpers/types";
 
 const CarList = ({ carlisting }: { carlisting: Carlisting[] }) => {
   return (
-    <ul className="flex justify-between flex-wrap border-2 border-solid border-lime-600">
+    <ul className="flex flex-wrap border-2 border-solid border-lime-600">
       {carlisting.map((car: Carlisting) => (
         <li
           key={car.id}
