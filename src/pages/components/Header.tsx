@@ -1,9 +1,10 @@
 import Image from "next/image";
+import NavBar from "./NavBar";
 
 const Header = () => {
   return (
-    <header className="shadow-lg">
-      <div className="flex items-center justify-between px-5 mx-auto mb-12 h-14 lg:h-24 max-w-[1192px]">
+    <header className="shadow-lg flex justify-around items-center ">
+      <div className="flex items-center px-5 h-14 lg:h-24">
         <Image
           src="/img/farie_logo.webp"
           height={48}
@@ -11,6 +12,7 @@ const Header = () => {
           alt="farie logo"
         />
       </div>
+      <NavBar />
     </header>
   );
 };
