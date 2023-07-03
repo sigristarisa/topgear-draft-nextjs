@@ -1,6 +1,7 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import Layout from "./components/Layout/Layout";
-import CarList from "./components/CarList/CarList";
+import Layout from "../app/layout";
+import Header from "./components/Header";
+import CarList from "./components/CarList";
 import Car from "../helpers/models/carlisting";
 import { Carlisting } from "../helpers/types";
 
@@ -20,6 +21,7 @@ const Home = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
+      <Header />
       <CarList carlisting={carlisting} />
     </Layout>
   );

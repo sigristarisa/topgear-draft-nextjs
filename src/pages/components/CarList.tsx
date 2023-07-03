@@ -1,4 +1,4 @@
-import { Carlisting } from "../../../helpers/types";
+import { Carlisting } from "../../helpers/types";
 
 const CarList = ({ carlisting }: { carlisting: Carlisting[] }) => {
   return (
