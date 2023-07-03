@@ -1,6 +1,5 @@
 import prisma from "@prisma/client";
 import {
-  Carlisting,
   Make,
   Model,
   Image,
@@ -12,7 +11,7 @@ import {
 
 const dbClient = new prisma.PrismaClient();
 
-export default class Carlistings {
+export default class Car {
   id: number;
   mileage: number;
   description: string;
@@ -51,7 +50,7 @@ export default class Carlistings {
       (this.order = order);
   }
 
-  static async findAllCarlisting() {
+  static async findAll() {
     const allCarlisting = await dbClient.carlisting.findMany({
       include: {
         make: true,
