@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
-import Layout from "../components/Layout/Layout";
-import CarList from "../components/CarList/CarList";
+import Layout from "./components/Layout/Layout";
+import CarList from "./components/CarList/CarList";
 import Car from "../helpers/models/carlisting";
 import { Carlisting } from "../helpers/types";
 

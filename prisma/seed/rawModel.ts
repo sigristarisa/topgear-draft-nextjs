@@ -1,4 +1,4 @@
-import { ModelSeed } from "../../helpers/types";
+import { ModelSeed } from "../../src/helpers/types";
 
 const tiguan: ModelSeed = {
   name: "tiguan",

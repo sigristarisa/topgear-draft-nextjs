@@ -1,4 +1,4 @@
-import { GearboxTypeSeed } from "../../helpers/types";
+import { GearboxTypeSeed } from "../../src/helpers/types";
 
 const automatic: GearboxTypeSeed = {
   name: "automat",

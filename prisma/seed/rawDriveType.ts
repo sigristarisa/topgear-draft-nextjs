@@ -1,4 +1,4 @@
-import { DriveTypeSeed } from "../../helpers/types";
+import { DriveTypeSeed } from "../../src/helpers/types";
 
 const awd: DriveTypeSeed = {
   name: "allrad",

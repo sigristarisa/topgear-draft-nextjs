@@ -1,4 +1,4 @@
-import { CarlistingSeed } from "../../helpers/types";
+import { CarlistingSeed } from "../../src/helpers/types";
 
 export const carlisting: CarlistingSeed[] = [
   {

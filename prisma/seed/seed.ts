@@ -14,7 +14,7 @@ import {
   GearboxTypeSeed,
   DriveTypeSeed,
   FuelTypeSeed,
-} from "../../helpers/types";
+} from "../../src/helpers/types";
 import prisma, { Prisma, PrismaClient } from "@prisma/client";
 
 const dbClient = new prisma.PrismaClient();

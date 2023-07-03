@@ -1,4 +1,4 @@
-import { FuelTypeSeed } from "../../helpers/types";
+import { FuelTypeSeed } from "../../src/helpers/types";
 
 const electric: FuelTypeSeed = {
   name: "elektro",

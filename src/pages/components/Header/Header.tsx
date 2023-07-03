@@ -9,7 +9,7 @@ const Header = () => {
         width={108}
         alt="farie logo"
       />
-      <h1 className="">hi</h1>
+      <h1 className="underline">hi</h1>
     </header>
   );
 };

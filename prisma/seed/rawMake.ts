@@ -1,4 +1,4 @@
-import { MakeSeed } from "../../helpers/types";
+import { MakeSeed } from "../../src/helpers/types";
 
 const volkswagen: MakeSeed = {
   name: "VW",
