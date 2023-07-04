@@ -7,6 +7,7 @@ import {
   DriveType,
   FuelType,
   OrderType,
+  FilterType,
 } from "../types";
 
 const dbClient = new prisma.PrismaClient();
@@ -63,11 +64,43 @@ export default class Car {
     return allCarlisting;
   }
 
-  static async findByMake(make: MakeType) {
+  static async findByFilter(filter: FilterType) {
+    const {
+      make,
+      model,
+      priceMin,
+      priceMax,
+      mileageMin,
+      mileageMax,
+      gearbox,
+      drive,
+      fuel,
+    } = filter;
+
     const foundCarlisting = await dbClient.carlisting.findMany({
       where: {
+        mileage: {
+          gte: mileageMin,
+          lte: mileageMax,
+        },
         make: {
-          name: make.name,
+          name: make?.name,
+        },
+        model: {
+          name: model?.name,
+        },
+        price: {
+          gte: priceMin,
+          lte: priceMax,
+        },
+        gearboxType: {
+          name: gearbox?.name,
+        },
+        fuelType: {
+          name: fuel?.name,
+        },
+        driveType: {
+          name: drive?.name,
         },
       },
     });

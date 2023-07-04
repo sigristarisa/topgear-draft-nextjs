@@ -1,16 +1,16 @@
 import { useState } from "react";
 import Header from "./Header";
-import { MakeType } from "../../helpers/types";
-import { filterContext } from "../../helpers/createContext";
+import { FilterType } from "../../helpers/types";
+import { filterContext, defaultFilter } from "../../helpers/createContext";
 
 interface Children {
   children: JSX.Element | JSX.Element[];
 }
 
 const Layout = ({ children }: Children) => {
-  const [make, setMake] = useState<MakeType>({});
+  const [filter, setFilter] = useState<FilterType>(defaultFilter);
   return (
-    <filterContext.Provider value={{ make, setMake }}>
+    <filterContext.Provider value={{ filter, setFilter }}>
       <div>
         <Header />
         <main>{children}</main>
