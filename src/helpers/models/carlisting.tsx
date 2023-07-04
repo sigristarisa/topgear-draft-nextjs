@@ -77,6 +77,8 @@ export default class Car {
       fuel,
     } = filter;
 
+    console.log("filter", filter);
+
     const foundCarlisting = await dbClient.carlisting.findMany({
       where: {
         mileage: {
@@ -102,6 +104,13 @@ export default class Car {
         driveType: {
           name: drive?.name,
         },
+      },
+      include: {
+        make: true,
+        model: true,
+        gearboxType: true,
+        driveType: true,
+        fuelType: true,
       },
     });
     return foundCarlisting;

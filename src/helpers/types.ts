@@ -123,3 +123,7 @@ export interface FilterType {
   fuel: FuelType | null;
   drive: DriveType | null;
 }
+
+export interface Data {
+  name: string;
+}
